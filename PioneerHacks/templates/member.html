@@ -27,7 +27,20 @@
         <p>ID: {{ member.student_id }}</p>
         <p>Hours: {{ member.hours }}</p>
 
+        <div class="events">
+            <p class="content-label"></p>
+            {% for event in member.events %}
+                <a class="clickable" href="{{ url_for('event', id = event.id) }}">
+                    <div>
+                        <p>{{ event.name }}</p>
+                        {{ event.description }}
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
 
     </div>
+           
+    
 </div>
 {% endblock %}

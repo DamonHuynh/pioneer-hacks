@@ -69,6 +69,7 @@ body{
     align-items: center;
     font-weight: 700;
     font-size: 3rem;
+    line-height: 3rem;
 }
 
 
@@ -192,7 +193,7 @@ a {
 }
 
 
-.events>a>div, .members>a>div{
+.events a>div, .members>a>div{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -279,11 +280,19 @@ li svg{
     right: 0;
     top: 0;
     bottom: 0;
+    cursor: pointer;
+
 }
 
 #checkBoxes {
     display: none;
     border: 1px #8DF5E4 solid;
+    position: absolute;
+    margin-top: 17.5px;
+    background-color: var(--sidebar);
+    accent-color: black;
+    color: white;
+    width: 300px;
 }
 
 #checkBoxes label {
@@ -292,6 +301,63 @@ li svg{
 
 #checkBoxes label:hover {
     background-color: #4F615E;
-    color: white;
+    color:white;
     /* Added text color for better visibility */
+}
+
+dialog{
+    border-radius: 50px;
+    padding: 3rem;
+}
+#addMember form, #addEvent form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30rem;
+    width: 50vw;
+    gap: 1rem;
+
+}
+
+
+form>div{
+    display: flex;
+    flex-direction: column;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid rgb(51, 123, 238);
+    box-shadow: 1px 1px 2px grey;
+
+}
+
+#addMember input, #addEvent input{
+    height: 1.25rem;
+    border-radius: 10px;
+    padding: .3rem;
+    border: 2x solid black;
+    
+}
+#addMember label, #addEvent label{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+
+#disclaimer{
+    font-size: .8rem;
+}
+
+button[type="submit"]{
+    height: 2.5rem;
+    border-radius: 30px;
+    border-style: none;
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: rgb(161, 233, 161);
+}
+button[type="submit"]:active, #addMember input:active, #addEvent input:active{
+    position: relative;
+    top: 1px;
 }

@@ -22,16 +22,20 @@
 <div class="content">
     <div>
         <p>{{ event.name }}</p>
-        <p>Description: {{ event.date }}</p>
+        <p>Description: {{ event.description }}</p>
         <p>Address: {{ event.address }}</p>
         <p>Date: {{ event.date }}</p>
         <p>Hours: {{ event.hours }}</p>
         
     </div>
-    <div>
-        Members:
+    <div class="members">
+        <p class="content-label"></p>
         {% for member in event.members %}
-        <p><member class="name"></member></p>
+            <a class="clickable" href="{{ url_for('member', id = member.id) }}">
+                <div>
+                    <p>{{ member.name }}</p>
+                </div>
+            </a>
         {% endfor %}
     </div>
 </div>
