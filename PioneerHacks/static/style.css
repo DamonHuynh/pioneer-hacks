@@ -361,3 +361,24 @@ button[type="submit"]:active, #addMember input:active, #addEvent input:active{
     position: relative;
     top: 1px;
 }
+
+img{
+    width: 450px;
+    height: 450px;
+    cursor: pointer;
+}
+
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info>p{
+    font-size: 1.05rem;
+    padding: 0.5rem;
+}
+.info span{
+    font-weight: 700;
+}

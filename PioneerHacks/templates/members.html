@@ -8,7 +8,7 @@
     <div>
         <div>
             <p class="greeting">Hi there,</p>
-            <p class="username">Bobby Bobberson</p>
+            <p class="username">Key Club Executive</p>
         </div>
     </div>
 </div>
@@ -29,7 +29,7 @@
 <div class="content">
     <div class="members">
         <p class="content-label">Members</p>
-        {% for member in event.members %}
+        {% for member in members %}
             <a class="clickable" href="{{ url_for('member', id = member.id)}}">
                 <div>
                     <p> </p>{{ member.name }} </p>
