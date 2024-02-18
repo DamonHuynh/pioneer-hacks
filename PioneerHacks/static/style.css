@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Kdam+Thmor+Pro&family=Playpen+Sans:wght@700&family=Roboto+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Doodle+Shadow&family=Rubik+Doodle+Triangles&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+    font-family: "Roboto";
+}
+
+ol, ul {
+	list-style: none;
+}
+
+:root{
+    --sidebar: #2575bc;
+    --project-border: #BC6C25;
+    --main-background: #deedf9;
+    --text-color: rgb(255, 255, 255);
+}
+
+body{
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    grid-template-columns: 1.2fr 4fr;
+    height: 100vh;
+    background-color: var(--main-background);
+}
+
+.header{
+    background-color: white;
+    grid-column: 2;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-template-rows: 1fr 2.5fr;
+    padding: .75rem 2rem;
+    line-height: 1.5rem;
+    box-shadow: 0px 1px 5px grey;
+    row-gap: 1rem;
+}
+
+.eventName{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+
+.header input{
+    flex: 2;
+    border-radius: 20px;
+    padding: .5rem;
+    border: none;
+    background-color: var(--main-background);
+}
+.search form{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0px;
+}
+
+
+.profile{
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-left: 4rem;
+}
+.profile-username{
+    font-weight: 600;
+}
+.greeting{
+    font-weight: 600;
+    font-size: .75rem;
+}
+.username{
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.search{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0px;
+}
+
+
+
+.create{
+    display: flex;
+    gap: 4rem;
+}
+
+.create div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: var(--sidebar);
+    width: 8rem;
+    border-radius: 20px;
+    padding: 3px 10px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: 100ms ease-out;
+}
+.create div:hover{
+    transform: scale(1.05);
+
+}
+
+.sidebar{
+    background-color: var(--sidebar);
+    grid-row: 1 / 3;
+    padding: 1rem; 
+    
+}
+a {
+    text-decoration: none;
+}
+.sidebar ul{
+    display: grid;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    gap: 1.2rem;
+}
+
+.sidebar li, .sidebar p{
+    color: var(--text-color);
+    font-weight:500;
+    display: flex;
+    align-items: center;
+
+}
+.sidebar p{
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.content{
+    padding: 1rem;
+
+}
+
+.content-label{
+    font-weight: 500;
+    font-size: 1.1rem;
+    grid-row: 1;
+    grid-column: 1 / -1;
+}
+
+.events, .members{
+    grid-row: 1 / 4;
+    display: grid;
+    grid-template-rows: 2rem;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+
+}
+
+
+.events>a>div, .members>a>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 1px 1px 8px grey;
+    border-left: 10px solid var(--project-border);
+    font-size: .75rem;
+    color: grey;
+    line-height: 1rem;
+    transition: 100ms ease-out;
+}
+
+.members>a>div{
+    border-left:10px solid rgb(150, 86, 214);
+}
+
+
+.events div > p, .members div > p{
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+/* Icons */
+
+.sidebar svg{
+    fill: white;
+    padding-right: 1rem;
+
+}
+
+.dash{
+    width: 4rem;
+}
+
+li svg{
+    margin-left: 1rem;
+    width: 1.75rem;
+}
+
+.magnify, .profile svg{
+    margin-right: 1rem;
+    width: 1.75rem;
+}
+
+
+/* Hover, click, focus effects */
+.clickable, .events>div, .members>p{
+    cursor: pointer;
+}
+.clickable:active{
+    position: relative;
+    top: 1px;
+}
+
+.sidebar li:hover, .sidebar p:hover{
+    text-decoration: underline;
+}
+
+.events>a>div:hover, .members>a>div:hover {
+    transform: scale(1.02);
+   
+}
+.multipleSelection {
+    width: 300px;
+    background-color: #BCC2C1;
+}
+
+.selectBox {
+    position: relative;
+}
+
+.selectBox select {
+    width: 100%;
+    font-weight: bold;
+}
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#checkBoxes {
+    display: none;
+    border: 1px #8DF5E4 solid;
+}
+
+#checkBoxes label {
+    display: block;
+}
+
+#checkBoxes label:hover {
+    background-color: #4F615E;
+    color: white;
+    /* Added text color for better visibility */
+}
